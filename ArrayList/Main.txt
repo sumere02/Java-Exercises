@@ -1,0 +1,39 @@
+import java.util.ArrayList;
+
+public class Main {
+    public static void temp(ArrayList<String> arrayList){
+        for (int i = 0;i<arrayList.size();i++){
+            System.out.println(arrayList.get(i));
+        }
+    }
+    public static void main(String[] args) {
+        ArrayList<String> arrayList = new ArrayList<String>();
+
+        arrayList.add("Metallica");
+        arrayList.add("Guns & Roses");
+        arrayList.add("Iron Maiden");
+        arrayList.add("Metallica");
+        /*
+        System.out.println(arrayList.get(0));
+        System.out.println(arrayList.size());
+        
+        for (int i = 0;i<arrayList.size();i++){
+            System.out.println(arrayList.get(i));
+        }
+        arrayList.remove("Metallica");
+        arrayList.remove(1);   
+        for (int i = 0;i<arrayList.size();i++){
+            System.out.println(arrayList.get(i));
+        }
+        System.out.println(arrayList.indexOf("Metallica"));
+        System.out.println(arrayList.lastIndexOf("Metallica"));
+        System.out.println(arrayList.indexOf("Emr"));
+        
+        arrayList.set(2,"Mega Death");
+        for (int i = 0;i<arrayList.size();i++){
+            System.out.println(arrayList.get(i));
+        }
+        */
+        temp(arrayList);
+    }
+}
