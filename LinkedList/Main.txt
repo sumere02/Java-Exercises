@@ -1,0 +1,63 @@
+import java.util.LinkedList;
+import java.util.ListIterator;
+
+
+public class Main{
+    
+    public static void print_list(LinkedList<String> places){
+        /* 
+        for(String s:places){
+           System.out.println(s); 
+        }
+        */
+        ListIterator<String> __iter__ = places.listIterator();
+        while(__iter__.hasNext()){
+            System.out.println(__iter__.next());
+        }
+    }
+
+    public static void add_ordered(LinkedList<String> places,String new_string){
+        ListIterator<String> __iter__ = places.listIterator();
+        while(__iter__.hasNext()){
+            int compare = __iter__.next().compareTo(new_string);
+            if(compare == 0){
+                //Two values are equal
+                System.out.println("This value already exists in LinkedList");
+                return;
+            }
+            else if(compare < 0){
+                //new String > __iter__next()
+
+            }
+            else if(compare > 0){
+                //new String < __iter__next()
+                __iter__.previous();
+                __iter__.add(new_string);
+                return;
+            }
+        }
+        __iter__.add(new_string);
+
+    }
+    
+    public static void main(String[] args) {
+        LinkedList<String> places = new LinkedList<String>();
+        /* 
+        places.add("ITU");
+        places.add("Market");
+        places.add("Library");
+        places.add("Fitness");
+        places.add("Home");
+
+        print_list(places);
+        System.out.println("******************");
+        places.add(3,"AVM");
+        places.remove(2);
+        print_list(places);
+        */
+        add_ordered(places,"B");
+        add_ordered(places,"A");
+        add_ordered(places,"Z");
+        print_list(places);
+    }
+}
